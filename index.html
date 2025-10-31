@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplikasi Keuangan Pribadi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Aplikasi Keuangan Pribadi</h1>
+    <p>Catat pemasukan & pengeluaran, lihat ringkasan, dan simpan otomatis di browser</p>
+
+    <div class="balance-card">
+      <h2>Saldo Saat Ini</h2>
+      <h3 id="balance">Rp 0</h3>
+      <div class="summary">
+        <div class="income">
+          <p>Pemasukan</p>
+          <h4 id="income">Rp 0</h4>
+        </div>
+        <div class="expense">
+          <p>Pengeluaran</p>
+          <h4 id="expense">Rp 0</h4>
+        </div>
+      </div>
+    </div>
+
+    <form id="transaction-form">
+      <label for="type">Tipe:</label>
+      <select id="type" required>
+        <option value="income">Pemasukan</option>
+        <option value="expense">Pengeluaran</option>
+      </select>
+
+      <label for="desc">Deskripsi:</label>
+      <input type="text" id="desc" placeholder="Contoh: Gaji / Makan" required />
+
+      <label for="amount">Jumlah (Rp):</label>
+      <input type="number" id="amount" required />
+
+      <button type="submit">Tambah Transaksi</button>
+    </form>
+
+    <h3>Daftar Transaksi</h3>
+    <ul id="transaction-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
